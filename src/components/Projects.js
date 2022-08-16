@@ -22,9 +22,9 @@ export default function Projects(){
                         <h3>The React Game of Life</h3>
                         <p>Web application built with React. Users can play Conway's Game of Life on a grid and test different patterns.</p>
                     </div>
-                    <div className="project--github">
+                    <a className="project--github" href="https://github.com/YoannGrdz/react-game-of-life.git" target="_blank" rel="noopener noreferrer">
                         {github_svg()}
-                    </div>
+                    </a>
                 </div>
                 <div className="project" id="project--div--bookme">
                     <div className="project--pic" style={{backgroundImage: `url(${bookme01})`}}></div>
@@ -32,9 +32,9 @@ export default function Projects(){
                         <h3>Bookme</h3>
                         <p>Web application built with Flask, users can manage their calendar and define their availability, as well as add other users and check their availability.</p>               
                     </div>
-                    <div className="project--github">
+                    <a className="project--github" href="https://github.com/YoannGrdz/Bookme.git" target="_blank" rel="noopener noreferrer">
                         {github_svg()}
-                    </div>     
+                    </a>     
                 </div>
                 <div className="project" id="project--div--finance">
                     <div className="project--pic" style={{backgroundImage: `url(${finance01})`}}></div>
@@ -42,9 +42,9 @@ export default function Projects(){
                         <h3>Finance</h3>
                         <p>Web application built with Flask, users can manage a portfolio of stocks, check stock prices in real time thanks to an api, and simulate investing in the stock market.</p>
                     </div>
-                    <div className="project--github">
+                    <a className="project--github" href="https://github.com/YoannGrdz/finance.git" target="_blank" rel="noopener noreferrer">
                         {github_svg()}
-                    </div>
+                    </a>
                 </div>
                 <div className="project" id="project--div--portfolio">
                     <div className="project--pic" style={{backgroundImage: `url(${portfolio01})`}}></div>
@@ -52,9 +52,9 @@ export default function Projects(){
                         <h3>My Portfolio Website</h3>
                         <p>Website-ception ! This website you're on was built with React, it is a single-page web application which allows me to present myself and demonstrate some of my skills.</p>
                     </div>
-                    <div className="project--github">
+                    <a className="project--github" href="https://github.com/YoannGrdz/portfolio_website_yoann_grudzien.git" target="_blank" rel="noopener noreferrer">
                         {github_svg()}
-                    </div>
+                    </a>
                 </div>
                 <div className="project" id="project--div--piano">
                     <div className="project--pic" style={{backgroundImage: `url(${piano01})`}}></div>
