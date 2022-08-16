@@ -1,38 +1,547 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+  --blue-1: hsl(231, 75%, 10%);
+  --blue-2: hsl(231, 75%, 5%);
+  --light-gold: hsl(51, 100%, 90%);
+  --red: hsl(346, 84%, 61%);
+  --blue: hsl(241, 34%, 60%);
+
+  padding: 0;
+  margin: 0;
+  background-color: var(--blue-1);
+  color: var(--light-gold);
+  font-family: 'Comfortaa', cursive;
+  
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar ------------------------------------------------------------------- */
+
+.nav {
+  width: 100%;
+  background-color: var(--blue-1);
+  position: fixed;
+  z-index: 5;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+  box-shadow: 0px 5px 5px 5px hsla(0, 0%, 0%, 25%) !important;
+}
+
+.nav--logo {
+  font-family: "Permanent Marker", cursive;
+  font-size: 2rem;
+  border: 3px solid var(--light-gold);
+  border-radius: 100%;
+  width: 2.8rem;
+  height: 2.8rem;
+  margin-left: 2rem;
+}
+
+.nav--list {
+  padding-right: 3rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  
+  
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav--button {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.nav a {
+  padding: 1.4rem 0;
+  border-bottom: 2px solid var(--blue-1);
+  transition: 0.2s;
+}
+
+.nav a:hover {
+  border-bottom: 2px solid var(--light-gold);
+}
+
+.contact--button {
+  border: 2px solid var(--light-gold);
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  transition: 0.3s;
+}
+
+.contact--button:hover {
+  font-weight: bold;
+  color: var(--blue-1);
+  background-color: var(--light-gold);
+  border-color: var(--blue-1);
+}
+
+/* Socials ------------------------------------------------------------------ */
+
+.socials {
+  position: fixed;
+  bottom: 0;
+  right: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60vh;
+  z-index: 4;
+  gap: 0.7rem;
+
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-gold);
+  font-size: 2rem;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  transition: 0.3s;
+}
+
+.social:hover {
+  border-radius: 100%;
+  border: 2px solid var(--light-gold);
+}
+
+.social--svg {
+  width: 1.8rem;
+  height: 1.8rem;
+} 
+
+.socials--trail {
+  width: 1px;
+  flex-grow: 1;
+  background-color: var(--light-gold);
+}
+
+/* welcome section ---------------------------------------------------------- */
+
+.welcome {
+  margin-top: 0px;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding-right: 3rem;
+  padding-left: 3em;
+  
+  border-bottom:1px solid var(--blue-2);
+
+}
+
+.hi {
+  font-size: 0.7rem;
+}
+
+.name {
+  font-size: 3.5rem;
+  font-family: 'Permanent Marker', cursive;
+}
+
+.job-title {
+  font-size: 2rem;
+}
+
+@media (min-width: 550px){
+
+
+  .hi {
+    font-size: 1rem;
+  }
+  
+  .name {
+    font-size: 6rem;
+  }
+  
+  .job-title {
+    font-size: 3rem;
+  }
+
+}
+
+/* about section ---------------------------------------------------------- */
+
+.about {
+  height: 100vh;
+  text-align: left;
+  color: var(--light-gold);
+  background-color: var(--blue-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10rem;
+  padding-left: 10em;
+  position: relative;
+  
+  border-bottom:1px solid var(--blue-2);
+
+}
+
+.about--content {
+  display: flex;
+  height: 60%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+}
+
+.about--background {
+  color: hsla(0, 0%, 50%, 10%);
+  position: absolute;
+  z-index: 1;
+  font-size: 10rem;
+  font-weight: bolder;
+
+  left: 0;
+}
+
+.about--text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  width: 50%;
+  height: 100%;
+  
+  line-height: 1.6;
+}
+
+.about--title {
+  font-family: 'Maven Pro', sans-serif;
+  position: relative;
+  z-index: 1;
+  font-size: 3rem;
+  padding: 1rem;
+  padding-bottom: 0rem;
+  margin: 0;
+}
+
+.about--description {
+  color: hsl(0, 0%, 70%);
+  position: relative;
+  z-index: 1;
+  font-size: 1.3rem;
+  padding: 1rem;
+}
+
+.about--description p {
+  margin-top: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.about--picture {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  box-shadow: 0px 0px 5px 5px hsla(0, 0%, 0%, 50%);
+  margin-left: 1rem;
+  z-index: 2;
+  background-color: white;
+  color: var(--blue-1);
+  padding: 0.3rem;
+}
+
+.my--pic {
+  height: 90%;
+  width: auto;
+}
+
+.pic--footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: 'Caveat', cursive;
+  font-size: 1.3rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/* tools ------------------------------------------------------------*/
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.tools {
+  background-color: var(--blue-1);
+  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-evenly;
+  padding: 3rem;
+  height: 100vh;
+  
+  border-bottom:1px solid var(--blue-2);
+}
+
+
+.tools--title {
+  
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 3rem;
+  color: var(--light-gold);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.tools--text {
+  color:hsl(0, 0%, 70%);
+  font-size: 1.3rem;
+  line-height: 1.6;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.hex--container {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.hex--row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hex--row--1 {
+  transform: translateY(0.7rem) translateX(-2.2rem);
+}
+
+.hex--row--2 {
+  transform: translateY(-0.8rem) translateX(2.3rem);
+}
+
+.hex {
+  width: 8rem;
+	height: 9rem;
+	background-color: var(--blue-2);
+	position: relative;
+	margin: 0 0.4rem;
+	clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+	transition: 0.7s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hex:hover {
+  background-color: var(--light-gold);
+  transform: scale(0.8);
+}
+
+.svg{
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+#html--svg {
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
+#css--svg {
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
+#js--svg {
+  width: 3.5rem;
+  height: 3.5rem;
+}
+
+#git--svg {
+  width: 5.2rem;
+  height: 5.2rem;
+}
+
+#flask--svg {
+  width: 5rem;
+  height: 5rem;
+}
+
+#vscode--svg {
+  width: 4.2rem;
+  height: 4.2rem;
+}
+
+.codepen--background {
+  z-index: -1;
+  position: absolute;
+  border-radius: 100%;
+  background-color: white;
+  height: 3rem;
+  width: 3rem;
+}
+
+
+
+/* projects --------------------------------------------------------- */
+
+.projects {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: var(--blue-1);
+  text-align: center;
+  
+  border-bottom:1px solid var(--blue-2);
+}
+
+.projects--header {
+  font-family: 'Maven Pro', sans-serif;
+  margin-top: 5rem;
+  font-size: 3rem;
+  margin-bottom: 5rem;
+}
+
+.projects--grid {
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.project {
   color: white;
+  height: 30rem;
+  width: 1fr;
+  background-color: hsl(0, 0%, 10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 0.3rem;
+  z-index: 1;
 }
 
-.App-link {
-  color: #61dafb;
+.project--pic {
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  top: 1rem;
+  left: 1rem;
+  background-size: cover;
+  border-radius: 0.3rem;
+  z-index: 2;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.project--info {
+  position: absolute;
+  width: 45%;
+  height: 45%;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: hsla(231, 75%, 5%, 92%);
+  border-radius: 0.5rem;
+  color: white;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+  line-height: 1.6;
+
 }
+
+.project--info p {
+  color: hsl(0, 0%, 60%);
+}
+
+#project--div--game {
+  background: linear-gradient(135deg,  hsl(0, 100%, 80%), hsl(0, 100%, 50%));
+}
+
+#project--div--bookme {
+  background: linear-gradient(135deg,  hsl(60, 100%, 80%), hsl(60, 100%, 50%));
+}
+
+#project--div--finance {
+  background: linear-gradient(135deg,  hsl(200, 100%, 80%), hsl(200, 100%, 50%));
+}
+
+#project--div--portfolio {
+  background: linear-gradient(135deg,  hsl(95, 100%, 80%), hsl(95, 100%, 50%));
+}
+
+#project--div--piano {
+  background: linear-gradient(135deg,  hsl(30, 100%, 80%), hsl(30, 100%, 50%));
+}
+
+#project--div--crud {
+  background: linear-gradient(135deg,  hsl(300, 100%, 80%), hsl(300, 100%, 50%));
+}
+
+.project--github {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  bottom: 1rem;
+  left: 1rem;
+  height: 3.7rem;
+  width: 3.7rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 3px 3px hsla(0, 0%, 50%, 50%);
+  transition: 0.3s;
+}
+
+
+.project--github:hover {
+  border-color: var(--light-gold);
+  background-color: hsla(0, 0%, 0%, 25%);
+}
+
+/* footer -------------------------------------------------------------------*/
+
+.footer {
+  background-color: var(--blue-1);
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+
+.footer > * {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.footer--links {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
