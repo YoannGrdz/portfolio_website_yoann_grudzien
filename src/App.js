@@ -7,17 +7,22 @@ import About from './components/About';
 import Projects from './components/Projects';
 import Tools from './components/Tools';
 import Footer from './components/Footer';
+import React from 'react';
 
 function App() {
+
+  const [language, setLanguage] = React.useState("english");
+
+
   return (
     <div className="App">
-      <Navbar />
+      <Navbar language={language} setLanguage={setLanguage} />
       <Socials />
-      <Welcome />
-      <About />
-      <Tools />
-      <Projects />
-      <Footer />
+      <Welcome language={language}/>
+      <About language={language} />
+      <Tools language={language} />
+      <Projects language={language} />
+      <Footer language={language} />
     </div>
   );
 }

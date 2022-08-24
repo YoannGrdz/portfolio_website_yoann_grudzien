@@ -9,7 +9,7 @@ import logosObject from "../logos/logos.js";
 
 var github_svg = logosObject.github_svg;
 
-export default function Projects(){
+export default function Projects(props){
 
 
     return(

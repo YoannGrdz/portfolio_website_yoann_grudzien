@@ -1,7 +1,7 @@
 import React from "react";
 import logosObject from "../logos/logos";
 
-export default function Tools(){
+export default function Tools(props){
     return (
 
         <div className='tools' id="Tools">

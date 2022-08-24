@@ -90,7 +90,7 @@ a {
 .language {
   width: 5rem;
   height: 100%;
-  padding: 0.8rem 0;
+  padding: 0.6rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -108,9 +108,6 @@ a {
   z-index: 3;
   height: 100%;
   width: auto
-}
-
-.flag:hover {
 }
 
 .language--dropdown {
@@ -133,10 +130,6 @@ a {
 }
 
 .language:hover .language--dropdown{
-  top: -1rem;
-} 
-
-.language--dropdown:hover {
   top: -1rem;
 } 
 
@@ -180,10 +173,11 @@ a {
   align-items: center;
   color: var(--light-gold);
   font-size: 2rem;
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   border-radius: 100%;
   transition: 0.3s;
+  padding: 0.5rem;
 }
 
 .social:hover {
@@ -192,8 +186,8 @@ a {
 }
 
 .social--svg {
-  width: 1.8rem;
-  height: 1.8rem;
+  width: 0.5rem;
+  height: 0.5rem;
 } 
 
 .socials--trail {
@@ -221,6 +215,11 @@ a {
   font-size: 0.7rem;
 }
 
+.hi2 {
+  font-size: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
 .name {
   font-size: 3.5rem;
   font-family: 'Permanent Marker', cursive;
@@ -235,6 +234,11 @@ a {
 
   .hi {
     font-size: 1rem;
+  }
+
+  .hi2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
   
   .name {
@@ -328,6 +332,7 @@ a {
   background-color: white;
   color: var(--blue-1);
   padding: 0.3rem;
+  border-radius: 0.3rem;
 }
 
 .my--pic {
