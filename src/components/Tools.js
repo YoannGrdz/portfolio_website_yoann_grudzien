@@ -2,11 +2,18 @@ import React from "react";
 import logosObject from "../logos/logos";
 
 export default function Tools(props){
+
+    const language = props.language;
+
+    const paragraph_en = "I'm constantly updating my knowledge of the technologies I use, as well as learning new ones to complement my toolset. By doing so I am ensuring to stay informed and up to date with the industry's standards.";
+    const paragraph_fr ="Je mets constamment à jour mes connaissances sur les technologies que j'utilise et j'en apprends de nouvelles pour compléter mon pannel d'outils. Ce faisant, je m'assure de rester informé et à jour avec les normes de l'industrie.";
+    const paragraph_jp ="使用するテクノロジに関する知識を常に更新し、ツールセットを補完する新しいテクノロジを学習しています。そうすることで、私は常に最新の情報を入手し、業界の基準を最新の状態に保つことができます。";
+
     return (
 
         <div className='tools' id="Tools">
-            <h2 className="tools--title">The tools I use</h2>
-            <p className="tools--text">I'm constantly updating my knowledge of the technologies I use, as well as learning new ones to complement my toolset. By doing so I am ensuring to stay informed and up to date with the industry's standards.</p>
+            <h2 className="tools--title">{language === "english" ? "The tools I use" : language === "french" ? "Mes outils" : "私のツール"}</h2>
+            <p className="tools--text">{language === "english" ? paragraph_en : language === "french" ? paragraph_fr : paragraph_jp}</p>
             <div className='hex--container'>
 
                 <div className="hex--row hex--row--1">

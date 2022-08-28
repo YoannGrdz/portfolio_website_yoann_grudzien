@@ -519,8 +519,8 @@ a {
 
 .project--info {
   position: absolute;
-  width: 45%;
-  height: 45%;
+  width: 50%;
+  height: 50%;
   bottom: 1rem;
   right: 1rem;
   background-color: hsla(231, 75%, 5%, 92%);
