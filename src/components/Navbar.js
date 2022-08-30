@@ -49,6 +49,12 @@ export default function Navbar(props){
     }
 
 
+    // function used to activate the contact form's visibility
+    const setFormDisplay = props.setFormDisplay;
+    function showForm (){
+        setFormDisplay(true);
+    }
+
     return (
         <nav className="nav">
             <p className="nav--logo">Y</p>
@@ -65,7 +71,7 @@ export default function Navbar(props){
                 <li className="nav--button">
                     <a href="#Projects">{language === "english" ? "Projects" : language === "french" ? "Projets" : "プロジェクト"}</a>
                 </li>
-                <li className="contact--button">{language === "english" ? "Get in touch" : language === "french" ? "Me contacter" : "連絡"}</li>
+                <li className="contact--button" onClick={showForm}>{language === "english" ? "Get in touch" : language === "french" ? "Me contacter" : "連絡"}</li>
 
                 <li className="language">
                     <div className="flag--container">

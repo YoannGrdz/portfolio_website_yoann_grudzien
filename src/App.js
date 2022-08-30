@@ -12,19 +12,22 @@ import ContactForm from './components/ContactForm';
 
 function App() {
 
+  // state used to decide what language should be displayed.
   const [language, setLanguage] = React.useState("english");
 
+  // state used to decide whether the contact form should be displayed.
+  const [formDisplay, setFormDisplay] = React.useState(false);
 
   return (
     <div className="App">
-      <Navbar language={language} setLanguage={setLanguage} />
+      <Navbar language={language} setLanguage={setLanguage} setFormDisplay={setFormDisplay} />
       <Socials />
+      <ContactForm formDisplay={formDisplay} setFormDisplay={setFormDisplay} />
       <Welcome language={language}/>
       <About language={language} />
       <Tools language={language} />
       <Projects language={language} />
       <Footer language={language} />
-      <ContactForm />
     </div>
   );
 }
