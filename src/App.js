@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Tools from './components/Tools';
 import Footer from './components/Footer';
 import React from 'react';
+import ContactForm from './components/ContactForm';
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
       <Tools language={language} />
       <Projects language={language} />
       <Footer language={language} />
+      <ContactForm />
     </div>
   );
 }

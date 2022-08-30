@@ -196,6 +196,107 @@ a {
   background-color: var(--light-gold);
 }
 
+/* contact form ------------------------------------------------------------- */
+
+.contact--form--container {
+  height: 100vh;
+  width: 100%;
+  background-color: hsla(0, 0%, 0%, 50%);
+  color: var(--light-gold);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact--form {
+  position: relative;
+  height: 80%;
+  width: 40rem;
+  background-color: hsla(0, 0%, 0%, 80%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+
+.contact--form--exit--btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  height: 2.7rem;
+  width: 2.7rem;
+  color: var(--light-gold);
+  font-size: 3rem;
+  background-color: hsla(0, 0%, 0%, 0%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.contact--form--exit--btn::after {
+  position: absolute;
+  content: "\00d7";
+  display: inline-block;
+}
+
+.contact--form--exit--btn:hover {
+  transform: scale(0.8);
+}
+
+.contact--form--title {
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 2.5rem;
+}
+
+.text--input {
+  display: block;
+  width: 70%;
+  height: 2.2rem;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  font-family: 'Comfortaa', cursive;
+}
+
+.text--input:focus {
+  outline-width: 0;
+  box-shadow: 0px 0px 5px 3px hsl(231, 75%, 70%);
+}
+
+.contact--form--message {
+  display: block;
+  width: 70%;
+  height: 6rem;
+  border-radius: 0.3rem;
+  font-family: 'Comfortaa', cursive;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+.contact--form--message:focus {
+  outline-width: 0;
+  box-shadow: 0px 0px 5px 5px hsl(231, 75%, 40%);
+}
+
+.contact--form--send--btn {
+  background-color: var(--blue-1);
+  border-radius: 0.5rem;
+  border: 2px solid var(--light-gold);
+  color: var(--light-gold);
+  font-size: 1.2rem;
+  padding: 0.5rem 1.2rem;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.contact--form--send--btn:hover {
+  background-color: var(--light-gold);
+  color: var(--blue-1);
+}
+
 /* welcome section ---------------------------------------------------------- */
 
 .welcome {
