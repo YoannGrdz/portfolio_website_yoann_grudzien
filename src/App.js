@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <Navbar language={language} setLanguage={setLanguage} setFormDisplay={setFormDisplay} />
       <Socials />
-      <ContactForm formDisplay={formDisplay} setFormDisplay={setFormDisplay} />
+      <ContactForm language={language} formDisplay={formDisplay} setFormDisplay={setFormDisplay} />
       <Welcome language={language}/>
       <About language={language} />
       <Tools language={language} />
