@@ -17,47 +17,53 @@ export default function Tools(props){
             <div className='hex--container'>
 
                 <div className="hex--row hex--row--1">
-                    <div className="hex">
-                        {logosObject.html_svg()}
+                    <div className="hex--subrow sub--1">
+                        <div className="hex">
+                            {logosObject.html_svg()}
+                        </div>
+                        <div className="hex">
+                            {logosObject.css_svg()}
+                        </div>
+                        <div className="hex">
+                            {logosObject.js_svg()}
+                        </div>
                     </div>
-                    <div className="hex">
-                        {logosObject.css_svg()}
-                    </div>
-                    <div className="hex">
-                        {logosObject.js_svg()}
-                    </div>
-                    <div className="hex">
-                        {logosObject.react_svg()}
-                    </div>
-                    <div className="hex">
-                        {logosObject.python_svg()}
-                    </div>
-                    <div className="hex">
-                        {logosObject.flask_svg()}
+                    <div className="hex--subrow">
+                        <div className="hex">
+                            {logosObject.react_svg()}
+                        </div>
+                        <div className="hex">
+                            {logosObject.python_svg()}
+                        </div>
+                        <div className="hex">
+                            {logosObject.flask_svg()}
+                        </div>
                     </div>
                 </div>
-
                 <div className="hex--row hex--row--2">
-                    <div className="hex">
-                        {logosObject.git_svg()}
+                    <div className="hex--subrow">
+                        <div className="hex">
+                            {logosObject.git_svg()}
+                        </div>
+                        <div className="hex">
+                            {logosObject.bootstrap_svg()}
+                        </div>
+                        <div className="hex">
+                            {logosObject.vscode_svg()}
+                        </div>
                     </div>
-                    <div className="hex">
-                        {logosObject.bootstrap_svg()}
-                    </div>
-                    <div className="hex">
-                        {logosObject.vscode_svg()}
-                    </div>
-                    <div className="hex" id="codpen--div">
-                        {logosObject.codepen_svg()}
-                    </div>
-                    <div className="hex">
-                        {logosObject.sql_svg()}
-                    </div>
-                    <div className="hex">
-                        {logosObject.github_svg()}
+                    <div className="hex--subrow  sub--4">
+                        <div className="hex" id="codpen--div">
+                            {logosObject.codepen_svg()}
+                        </div>
+                        <div className="hex">
+                            {logosObject.sql_svg()}
+                        </div>
+                        <div className="hex">
+                            {logosObject.github_svg()}
+                        </div>
                     </div>
                 </div>
-
             </div>
         </div>
 
