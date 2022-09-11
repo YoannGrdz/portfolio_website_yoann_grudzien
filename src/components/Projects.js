@@ -16,19 +16,19 @@ export default function Projects(props){
     // variables used to store the different language options for each project
     const description_game_of_life_en = "Web application built with React. Users can play Conway's Game of Life on a grid and test different patterns.";
     const description_game_of_life_fr = "Application Web construite avec React. Les utilisateurs peuvent jouer au jeu de la vie de Conway sur une grille et tester différentes configurations.";
-    const description_game_of_life_jp = "React で構築された ウェブ アプリケーション。ユーザーはグリッド上でコンウェイのライフ ゲームをプレイし、さまざまなパターンをテストできます。";
+    const description_game_of_life_jp = "React で構築された ウェブ アプリケーション。ユーザーはグリッド上でコンウェイのライフ ゲームをプレイし、様々なパターンをテストできます。";
 
     const description_bookme_en = "Web application built with Flask, users can manage their calendar and define their availability, as well as add other users and check their availability.";
     const description_bookme_fr = "Application Web construite avec Flask, les utilisateurs peuvent gérer leur calendrier et définir leur disponibilité, ainsi qu'ajouter d'autres utilisateurs et vérifier leur disponibilité.";
-    const description_bookme_jp = "Flask で構築された ウェブ アプリケーションで、ユーザーは自分のカレンダーを管理して空き状況を定義できるだけでなく、他のユーザーを追加して空き状況を確認できます。";
+    const description_bookme_jp = "Flask で構築された ウェブ アプリケーションで、ユーザーは自分のカレンダーを管理し、スケジュールを明確にできるだけでなく、他のユーザーを追加してスケジュールを確認できます。";
 
     const description_finance_en = "Web application built with Flask, users can manage a portfolio of stocks, check stock prices in real time thanks to an API, and simulate investing in the stock market.";
     const description_finance_fr = "Application Web construite avec Flask, les utilisateurs peuvent gérer un portefeuille d'actions, vérifier les cours des actions en temps réel grâce à une API et simuler des investissements en bourse.";
-    const description_finance_jp = "Flask で構築された ウェブ アプリケーションで、ユーザーは株式のポートフォリオを管理し、API のおかげでリアルタイムで株価を確認し、株式市場への投資をシミュレートできます。";
+    const description_finance_jp = "Flask で構築された ウェブ アプリケーションで、ユーザーは株式のポートフォリオを管理し、APIでリアルタイムの株価を確認し、株式市場への投資をシュミレーションできます。";
 
     const description_portfolio_en = "Website-ception ! This website you're on was built with React, it is a single-page web application which allows me to present myself and demonstrate some of my skills.";
     const description_portfolio_fr = "Site-ception ! Ce site web sur lequel vous vous trouvez a été construit avec React, c'est une application web d'une seule page qui me permet de me présenter et de démontrer certaines de mes compétences.";
-    const description_portfolio_jp = "Website-ception ！あなたがアクセスしているこの ウェブ サイトは React で構築されています。これは単一ページの Web アプリケーションであり、自己紹介と私のスキルの一部を示すことができます。";
+    const description_portfolio_jp = "Website-ception ！あなたがアクセスしているこの ウェブ サイトは React で構築されています。これは単一ページの Web アプリケーションであり、自己紹介と私のスキルの一部を実証することができます。";
 
     const description_piano_en = "Coming soon ! A web application built with React where users can play the piano with their keyboard.";
     const description_piano_fr = "Bientôt disponible ! Une application Web construite avec React où les utilisateurs peuvent jouer du piano avec leur clavier.";

@@ -71,7 +71,7 @@ export default function Navbar(props){
                 <li className="nav--button">
                     <a href="#Projects">{language === "english" ? "Projects" : language === "french" ? "Projets" : "プロジェクト"}</a>
                 </li>
-                <li className="contact--button" onClick={showForm}>{language === "english" ? "Get in touch" : language === "french" ? "Me contacter" : "連絡"}</li>
+                <li className="contact--button" onClick={showForm}>{language === "english" ? "Get in touch" : language === "french" ? "Me contacter" : "問い合わせ"}</li>
 
                 <li className="language">
                     <div className="flag--container">

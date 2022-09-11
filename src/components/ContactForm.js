@@ -20,12 +20,12 @@ export default function ContactForm(props){
         <div className="contact--form--container" style={style}>
             <div className="contact--form">
                 <button className="contact--form--exit--btn" onClick={hideForm}></button>
-                <h2 className="contact--form--title">{language === "english" ? "Contact me !" : language === "french" ? "Contactez moi !" : "私に連絡して !"}</h2>
+                <h2 className="contact--form--title">{language === "english" ? "Contact me !" : language === "french" ? "Contactez moi !" : "お問い合わせ !"}</h2>
                 <input type="text" className="text--input contact--form--name--input" required placeholder={language === "english" ? "Enter your name": language === "french" ? "Votre nom" : "お名前"} />
                 <input type="email" className="text--input contact--form--email--input" required placeholder={language === "english" ? "Enter your email" : language === "french" ? "Votre adresse email" : "メールアドレス"}/>
                 <input type="text" className="text--input contact--form--text--input" required placeholder={language === "english" ? "Enter the subject" : language === "french" ? "Sujet du message" : "メッセージの件名"} />
                 <textarea className="contact--form--message" required placeholder={language === "english" ? "Enter your message" : language === "french" ? "Votre message" : "メッセージ"} />
-                <button className="contact--form--send--btn">Send</button>
+                <button className="contact--form--send--btn">{language === "english" ? "Send" : language === "french" ? "Envoyer" : "送信"}</button>
             </div>
         </div>
     )

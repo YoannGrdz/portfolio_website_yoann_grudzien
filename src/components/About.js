@@ -12,7 +12,7 @@ export default function About(props){
 
     const p2_en = "I enjoy crafting fast, responsive, interactive and visually pleasant experiences for all users and devices.";
     const p2_fr = "J'aime créer des expériences rapides, réactives, interactives et visuellement agréables pour tout utilisateur et appareil.";
-    const p2_jp = "すべてのユーザーとデバイスに対して、高速で応答性が高く、インタラクティブで視覚的に快適なエクスペリエンスを作成することを楽しんでいます。";
+    const p2_jp = "すべてのユーザーとデバイスに対して、スピーディーに対応し、相互的かつ視覚的に快適なエクスペリエンスを作成することを楽しんでいます。";
 
     const p3_en = "In my free time you can find me video editing in my room, working out, or flying my paraglider !";
     const p3_fr = "Pendant mon temps libre, vous pouvez me trouver en train de faire du montage vidéo dans ma chambre, de faire du sport ou de piloter mon parapente !";

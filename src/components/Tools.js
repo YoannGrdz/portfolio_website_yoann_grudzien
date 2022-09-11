@@ -7,7 +7,7 @@ export default function Tools(props){
 
     const paragraph_en = "I'm constantly updating my knowledge of the technologies I use, as well as learning new ones to complement my toolset. By doing so I am ensuring to stay informed and up to date with the industry's standards.";
     const paragraph_fr ="Je mets constamment à jour mes connaissances sur les technologies que j'utilise et j'en apprends de nouvelles pour compléter mon pannel d'outils. Ce faisant, je m'assure de rester informé et à jour avec les normes de l'industrie.";
-    const paragraph_jp ="使用するテクノロジに関する知識を常に更新し、ツールセットを補完する新しいテクノロジを学習しています。そうすることで、私は常に最新の情報を入手し、業界の基準を最新の状態に保つことができます。";
+    const paragraph_jp ="使用するテクノロジーに関する知識を常にアップデートし、ツールセットを補足する新しいテクノロジーを学んでいます。そうすることで、私は常に最新の情報を入手し、業界の基準を最新の状態に保つことができます。";
 
     return (
 
