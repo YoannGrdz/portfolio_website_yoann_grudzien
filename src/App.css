@@ -54,7 +54,7 @@ a {
 }
 
 .nav--list {
-  padding-right: 3rem;
+  padding-right: 2rem;
   list-style: none;
   display: flex;
   justify-content: space-evenly;
@@ -152,6 +152,23 @@ a {
 }
 
 
+@media (max-width: 900px){
+
+  .nav--list {
+    gap: 1.5rem;
+    padding-right: 1rem;
+  }
+
+  .nav a {
+    font-size: 0.8rem;
+  }
+
+  .contact--button {
+    font-size: 0.8rem;
+  }
+
+}
+
 
 /* Socials ------------------------------------------------------------------ */
 
@@ -197,6 +214,22 @@ a {
   width: 1px;
   flex-grow: 1;
   background-color: var(--light-gold);
+}
+
+@media ( max-width: 900px ){
+
+  .social--svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .socials {
+    right: 2rem;
+    height: 40vh;
+    gap: 0.5rem;
+  
+  }
+
 }
 
 /* contact form ------------------------------------------------------------- */
@@ -283,7 +316,7 @@ a {
 
 .contact--form--message:focus {
   outline-width: 0;
-  box-shadow: 0px 0px 5px 5px hsl(231, 75%, 40%);
+  box-shadow: 0px 0px 5px 3px hsl(231, 75%, 70%);
 }
 
 .contact--form--send--btn {
@@ -522,6 +555,11 @@ a {
   
 }
 
+@media (max-width: 900px) {
+  .about--background {
+    top: 0rem;
+  }
+}
 
 
 /* tools ------------------------------------------------------------*/
