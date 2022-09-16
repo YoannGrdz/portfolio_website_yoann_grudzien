@@ -88,6 +88,11 @@ export default function Navbar(props){
                     </ul>
                 </li>
             </ul>
+            <li className="menu--icon">
+                <div className="menu--bar bar--1"></div>
+                <div className="menu--bar bar--2"></div>
+                <div className="menu--bar bar--3"></div>
+            </li>
         </nav>
     )
 

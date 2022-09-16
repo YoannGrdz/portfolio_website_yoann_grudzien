@@ -17,10 +17,10 @@ function App() {
 
   // state used to decide whether the contact form should be displayed.
   const [formDisplay, setFormDisplay] = React.useState(false);
-
+  // <Navbar language={language} setLanguage={setLanguage} setFormDisplay={setFormDisplay} />
   return (
     <div className="App">
-      <Navbar language={language} setLanguage={setLanguage} setFormDisplay={setFormDisplay} />
+      
       <Socials />
       <ContactForm language={language} formDisplay={formDisplay} setFormDisplay={setFormDisplay} />
       <Welcome language={language}/>
