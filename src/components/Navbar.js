@@ -40,8 +40,8 @@ export default function Navbar(props){
         }
     ];
 
+    // current will store the language that is currently selected in a list of length 1, while removing it from languageList
     let current;
-
     for (let i = 0; i < languagesList.length; i++){
         if (languagesList[i].lang === language) {
             current = languagesList.splice(i, 1);
@@ -55,27 +55,38 @@ export default function Navbar(props){
         setFormDisplay(true);
     }
 
+    // mobile navbar control ------------------------------------------------ //
+    const [menuIsOpen, setMenuIsOpen] = React.useState("false");
+
+    function toggleMenu(){
+        setMenuIsOpen(previous => !previous);
+    }
+
+    function closeMenu(){
+        setMenuIsOpen(false);
+    }
+
     return (
         <nav className="nav">
             <p className="nav--logo">Y</p>
-            <ul className="nav--list">
+            <ul className={menuIsOpen ? "nav--list" : "nav--list nav--list--hidden"}>
                 <li className="nav--button">
-                    <a href="#Welcome">{language === "english" ? "Welcome" : language === "french" ? "Bienvenue" : "ようこそ"}</a>
+                    <a href="#Welcome" onClick={closeMenu}>{language === "english" ? "Welcome" : language === "french" ? "Bienvenue" : "ようこそ"}</a>
                 </li>
                 <li className="nav--button">
-                    <a href="#About">{language === "english" ? "About" : language === "french" ? "À propos" : "私について"}</a>
+                    <a href="#About" onClick={closeMenu}>{language === "english" ? "About" : language === "french" ? "À propos" : "私について"}</a>
                 </li>
                 <li className="nav--button">
-                    <a href="#Tools">{language === "english" ? "My tools" : language === "french" ? "Mes outils" : "ツール"}</a>
+                    <a href="#Tools" onClick={closeMenu}>{language === "english" ? "My tools" : language === "french" ? "Mes outils" : "ツール"}</a>
                 </li>
                 <li className="nav--button">
-                    <a href="#Projects">{language === "english" ? "Projects" : language === "french" ? "Projets" : "プロジェクト"}</a>
+                    <a href="#Projects" onClick={closeMenu}>{language === "english" ? "Projects" : language === "french" ? "Projets" : "プロジェクト"}</a>
                 </li>
                 <li className="contact--button" onClick={showForm}>{language === "english" ? "Get in touch" : language === "french" ? "Me contacter" : "問い合わせ"}</li>
 
                 <li className="language">
                     <div className="flag--container">
-                        <img className="flag" src={current[0].flag} alt={current.lang}></img>
+                        <img className="flag" src={current[0].flag} alt={current[0].lang}></img>
                     </div>
                     <ul className="language--dropdown">
                         <li className="language--space"></li>
@@ -88,10 +99,10 @@ export default function Navbar(props){
                     </ul>
                 </li>
             </ul>
-            <li className="menu--icon">
-                <div className="menu--bar bar--1"></div>
-                <div className="menu--bar bar--2"></div>
-                <div className="menu--bar bar--3"></div>
+            <li className="menu--icon" onClick={toggleMenu}>
+                <div className={menuIsOpen ? "menu--bar bar--1" : "menu--bar"}></div>
+                <div className={menuIsOpen ? "menu--bar bar--2" : "menu--bar"}></div>
+                <div className={menuIsOpen ? "menu--bar bar--3" : "menu--bar"}></div>
             </li>
         </nav>
     )
