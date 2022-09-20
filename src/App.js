@@ -18,6 +18,7 @@ function App() {
   // state used to decide whether the contact form should be displayed.
   const [formDisplay, setFormDisplay] = React.useState(false);
   
+
   return (
     <div className="App">
       <Navbar language={language} setLanguage={setLanguage} setFormDisplay={setFormDisplay} />
