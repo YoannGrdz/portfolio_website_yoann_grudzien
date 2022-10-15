@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
+
+
+
 
 export default function ContactForm(props){
 
+    // code used to connect the form to the emailjs sevice, see https://www.emailjs.com/ for info
+    const form = useRef();
+  
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm(
+            'service_obdagma', 
+            'template_i038dq8', 
+            form.current, 
+            'LVRygFkD1LjQSFD--'
+        )
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    }
+
+
+    // props used to manage form visibility and language
     const formDisplay = props.formDisplay;
     const setFormDisplay = props.setFormDisplay;
     const language = props.language;
 
+    // closes the form
     function hideForm(){
         setFormDisplay(false);
     }
@@ -20,7 +47,7 @@ export default function ContactForm(props){
     const [formData, setFormData] = React.useState(
         {
             username: "",
-            email: "",
+            userEmail: "",
             subject: "",
             message: ""
         }
@@ -43,9 +70,9 @@ export default function ContactForm(props){
 
 
     return(
-        <div className="contact--form--container" style={style}>
-            <div className="contact--form">
-                <button className="contact--form--exit--btn" onClick={hideForm}></button>
+        <div className="contact--form--container" style={style} onSubmit={sendEmail}>
+            <form className="contact--form" ref={form}>
+                <button type="button" className="contact--form--exit--btn" onClick={hideForm}></button>
                 <h2 className="contact--form--title">{language === "english" ? "Contact me !" : language === "french" ? "Contactez moi !" : "お問い合わせ !"}</h2>
                 <input 
                     type="text" 
@@ -61,8 +88,8 @@ export default function ContactForm(props){
                     className="text--input contact--form--email--input" 
                     required 
                     placeholder={language === "english" ? "Enter your email" : language === "french" ? "Votre adresse email" : "メールアドレス"}
-                    name="email"
-                    value={formData.email}
+                    name="userEmail"
+                    value={formData.userEmail}
                     onChange={handleChange}
                 />
                 <input 
@@ -82,8 +109,8 @@ export default function ContactForm(props){
                     value={formData.message}
                     onChange={handleChange}
                 />
-                <button className="contact--form--send--btn">{language === "english" ? "Send" : language === "french" ? "Envoyer" : "送信"}</button>
-            </div>
+                <button type="submit" className="contact--form--send--btn">{language === "english" ? "Send" : language === "french" ? "Envoyer" : "送信"}</button>
+            </form>
         </div>
     )
 }
