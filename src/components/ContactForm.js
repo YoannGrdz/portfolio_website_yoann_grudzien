@@ -37,13 +37,7 @@ export default function ContactForm(props){
         setFormDisplay(false);
     }
 
-    // if form display is set to false, the style object given to the contact--form--container element mekes it hidden
-    const visibility = formDisplay ? "" : "hidden";
-    const style = {
-        visibility: visibility
-    }
-
-    // formd data state
+    // form data state
     const [formData, setFormData] = React.useState(
         {
             username: "",
@@ -70,7 +64,7 @@ export default function ContactForm(props){
 
 
     return(
-        <div className="contact--form--container" style={style} onSubmit={sendEmail}>
+        <div className={formDisplay === true ? "contact--form--container" : "contact--form--container contact--form--container--hidden"} onSubmit={sendEmail}>
             <form className="contact--form" ref={form}>
                 <button type="button" className="contact--form--exit--btn" onClick={hideForm}></button>
                 <h2 className="contact--form--title">{language === "english" ? "Contact me !" : language === "french" ? "Contactez moi !" : "お問い合わせ !"}</h2>
