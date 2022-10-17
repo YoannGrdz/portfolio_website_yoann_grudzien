@@ -1532,3 +1532,15 @@ a {
   background-color: var(--light-gold);
   border: 1px solid var(--blue-2);
 }
+
+
+@supports (scrollbar-color: black white){
+  * {
+    scrollbar-color: hsl(51, 100%, 90%) hsl(231, 75%, 5%);
+    scrollbar-arrow-color: hsl(51, 100%, 90%);
+    scrollbar-width: auto;
+  }
+}
+
+/* --blue-2: hsl(231, 75%, 5%);
+--light-gold: hsl(51, 100%, 90%); */
