@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import gameOfLife02 from "../pictures/gameOfLife02.png";
 import bookme01 from "../pictures/bookme01.png";
 import finance01 from "../pictures/finance01.png";
@@ -6,10 +6,17 @@ import piano01 from "../pictures/piano.jpg";
 import crudApp01 from "../pictures/crudApp01.jpg";
 import portfolio01 from "../pictures/portfolio01.png";
 import logosObject from "../logos/logos.js";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 var github_svg = logosObject.github_svg;
 
 export default function Projects(props){
+    
+    // inititaliszinf animations on scroll
+    useEffect(() => {
+        Aos.init({duration: 750});
+    }, [])
 
     const language = props.language;
 
@@ -42,9 +49,9 @@ export default function Projects(props){
 
     return(
         <div className="projects" id="Projects">
-            <h2 className="projects--header">My Projects</h2>
+            <h2 className="projects--header" data-aos="fade-up">My Projects</h2>
             <div className="projects--grid">
-                <div className="project" id="project--div--game">
+                <div className="project" id="project--div--game" data-aos="flip-left">
                     <div className="project--pic" style={{ backgroundImage: `url(${gameOfLife02})` }}></div>
                     <div className="project--info">
                         <h3>The React Game of Life</h3>
@@ -54,7 +61,7 @@ export default function Projects(props){
                         {github_svg()}
                     </a>
                 </div>
-                <div className="project" id="project--div--bookme">
+                <div className="project" id="project--div--bookme" data-aos="flip-left" data-aos-delay="300">
                     <div className="project--pic" style={{backgroundImage: `url(${bookme01})`}}></div>
                     <div className="project--info"> 
                         <h3>Bookme</h3>
@@ -64,7 +71,7 @@ export default function Projects(props){
                         {github_svg()}
                     </a>     
                 </div>
-                <div className="project" id="project--div--finance">
+                <div className="project" id="project--div--finance" data-aos="flip-left">
                     <div className="project--pic" style={{backgroundImage: `url(${finance01})`}}></div>
                     <div className="project--info">
                         <h3>Finance</h3>
@@ -74,7 +81,7 @@ export default function Projects(props){
                         {github_svg()}
                     </a>
                 </div>
-                <div className="project" id="project--div--portfolio">
+                <div className="project" id="project--div--portfolio" data-aos="flip-left" data-aos-delay="300">
                     <div className="project--pic" style={{backgroundImage: `url(${portfolio01})`}}></div>
                     <div className="project--info">
                         <h3>My Portfolio Website</h3>
@@ -84,7 +91,7 @@ export default function Projects(props){
                         {github_svg()}
                     </a>
                 </div>
-                <div className="project" id="project--div--piano">
+                <div className="project" id="project--div--piano" data-aos="flip-left">
                     <div className="project--pic" style={{backgroundImage: `url(${piano01})`}}></div>
                     <div className="project--info">
                         <h3>React Keyboard Piano</h3>
@@ -94,7 +101,7 @@ export default function Projects(props){
                         {github_svg()}
                     </div>
                 </div>
-                <div className="project" id="project--div--crud">
+                <div className="project" id="project--div--crud" data-aos="flip-left" data-aos-delay="300">
                     <div className="project--pic" style={{backgroundImage: `url(${crudApp01})`}}></div>
                     <div className="project--info">
                         <h3>React Crud App</h3>

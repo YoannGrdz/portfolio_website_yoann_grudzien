@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import logosObject from "../logos/logos";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Tools(props){
+
+    // inititaliszinf animations on scroll
+    useEffect(() => {
+        Aos.init({duration: 750});
+    }, [])
 
     const language = props.language;
 
@@ -12,9 +19,9 @@ export default function Tools(props){
     return (
 
         <div className='tools' id="Tools">
-            <h2 className="tools--title">{language === "english" ? "The tools I use" : language === "french" ? "Mes outils" : "私のツール"}</h2>
-            <p className="tools--text">{language === "english" ? paragraph_en : language === "french" ? paragraph_fr : paragraph_jp}</p>
-            <div className='hex--container'>
+            <h2 className="tools--title" data-aos="fade-up">{language === "english" ? "The tools I use" : language === "french" ? "Mes outils" : "私のツール"}</h2>
+            <p className="tools--text" data-aos="fade-up">{language === "english" ? paragraph_en : language === "french" ? paragraph_fr : paragraph_jp}</p>
+            <div className='hex--container' data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
 
                 <div className="hex--row hex--row--1">
                     <div className="hex--subrow sub--1">

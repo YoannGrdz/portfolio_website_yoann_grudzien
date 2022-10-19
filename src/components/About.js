@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import pic from "../pictures/profile-pic-01.JPG";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function About(props){
+
+    // inititaliszinf animations on scroll
+    useEffect(() => {
+        Aos.init({duration: 750});
+    }, [])
 
     const language = props.language;
 
@@ -21,16 +28,16 @@ export default function About(props){
     return (
         <section className="about" id="About">
             <div className="about--content">
-                <div className="about--background">{language === "english" ? "About" : language === "french" ? "À propos" : "私について"}</div>
+                <div className="about--background" data-aos="fade-right" data-aos-delay="400">{language === "english" ? "About" : language === "french" ? "À propos" : "私について"}</div>
                 <div className="about--text">
-                    <h2 className="about--title">{language === "english" ? "About me" : language === "french" ? "À propos de moi" : "私について"}</h2>
-                    <div className="about--description">
+                    <h2 className="about--title" data-aos="fade-up" >{language === "english" ? "About me" : language === "french" ? "À propos de moi" : "私について"}</h2>
+                    <div className="about--description" data-aos="fade-up" >
                         <p>{language === "english" ? p1_en : language === "french" ? p1_fr : p1_jp}</p>
                         <p>{language === "english" ? p2_en : language === "french" ? p2_fr : p2_jp}</p>
                         <p>{language === "english" ? p3_en : language === "french" ? p3_fr : p3_jp}</p>
                     </div>
                 </div>
-                <div className="about--picture">
+                <div className="about--picture" data-aos="flip-left" data-aos-delay="800">
                     
                     <img className="my--pic" src={pic} alt="me"></img>
                     <div className="pic--footer">
