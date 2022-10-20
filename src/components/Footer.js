@@ -4,9 +4,9 @@ export default function Footer(props){
 
     const language = props.language;
 
-    const p2_en = "Handcrafted by me © 2022 - Yoann.dev - All rights reserved";
-    const p2_fr = "Fabriqué à la main par mes soins © 2022 - Yoann.dev - Tous droits réservés";
-    const p2_jp = "私が作成しました。 © 2022 - Yoann.dev - 無断複写・転載を禁じます。";
+    const p2_en = "Handcrafted by me © 2022 - yoanngrudzien.website - All rights reserved";
+    const p2_fr = "Fabriqué à la main par mes soins © 2022 - yoanngrudzien.website - Tous droits réservés";
+    const p2_jp = "私が作成しました。 © 2022 - yoanngrudzien.website - 無断複写・転載を禁じます。";
 
     
     return (

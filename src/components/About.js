@@ -21,9 +21,9 @@ export default function About(props){
     const p2_fr = "J'aime créer des expériences rapides, réactives, interactives et visuellement agréables pour tout utilisateur et appareil.";
     const p2_jp = "すべてのユーザーとデバイスに対して、スピーディーに対応し、相互的かつ視覚的に快適なエクスペリエンスを作成することを楽しんでいます。";
 
-    const p3_en = "In my free time you can find me video editing in my room, working out, or flying my paraglider !";
-    const p3_fr = "Pendant mon temps libre, vous pouvez me trouver en train de faire du montage vidéo dans ma chambre, de faire du sport ou de piloter mon parapente !";
-    const p3_jp = "自由な時間には、部屋でビデオ編集をしたり、ワークアウトしたり、パラグライダーを飛ばしたりしています。";
+    const p3_en = "In my free time you can find me learning stuff on youtube at home, working out, or having a drink at a bar with friends !";
+    const p3_fr = "Pendant mon temps libre, vous pouvez me trouver en train d'apprendre des nouvelles choses sur youtube, de faire du sport, ou de prendre un verre dans un bar avec des amis !";
+    const p3_jp = "自由な時間には、自宅で YouTube で何かを学んだり、ワークアウトしたり、友達とバーでドリンクを楽しんだりしています。";
 
     return (
         <section className="about" id="About">

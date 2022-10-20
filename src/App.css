@@ -528,7 +528,6 @@ a {
   align-items: center;
   text-align: center;
   padding: 0rem 5rem;
-  border-bottom:1px solid var(--blue-2);
 
 }
 
@@ -636,7 +635,6 @@ a {
   align-items: center;
   padding: 0rem 10rem;
   position: relative;
-  border-bottom:1px solid var(--blue-2);
 
 }
 
@@ -859,7 +857,6 @@ a {
   gap: 1rem;
   padding: 3rem;
   height: 100vh;
-  border-bottom:1px solid var(--blue-2);
 }
 
 
@@ -1246,7 +1243,6 @@ a {
   padding-bottom: 5rem;
   background-color: var(--blue-1);
   text-align: center;
-  border-bottom:1px solid var(--blue-2);
 }
 
 .projects--header {

@@ -8,13 +8,13 @@ export default function Socials(){
 
         <div className="socials">
             <div className="social">
-                {logosObject.github_svg2()}
+                <a href="https://github.com/YoannGrdz" target="_blank" rel="noopener noreferrer">{logosObject.github_svg2()}</a>
             </div>
             <div className="social">
-                {logosObject.linkedin_svg()}
+                <a href="https://github.com/YoannGrdz" target="_blank" rel="noopener noreferrer">{logosObject.linkedin_svg()}</a>
             </div>
             <div className="social">
-                {logosObject.codepen_svg2()}
+                <a href="https://codepen.io/yoanngrdz" target="_blank" rel="noopener noreferrer">{logosObject.codepen_svg2()}</a>
             </div>
             <div className="socials--trail"></div>
         </div>
