@@ -341,6 +341,12 @@ a {
   padding: 0.5rem;
 }
 
+.social a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .social:hover {
   border-radius: 100%;
   border: 2px solid var(--light-gold);
