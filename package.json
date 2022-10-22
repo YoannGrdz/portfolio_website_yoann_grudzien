@@ -1,6 +1,7 @@
 {
   "name": "portfolio_website_yoann_grudzien",
-  "version": "0.1.0",
+  "homepage": "https://yoanngrudzien.website",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.7.0",

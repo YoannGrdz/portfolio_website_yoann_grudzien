@@ -49,7 +49,7 @@ export default function Projects(props){
 
     return(
         <div className="projects" id="Projects">
-            <h2 className="projects--header" data-aos="fade-up">My Projects</h2>
+            <h2 className="projects--header" data-aos="fade-up">{language === "english" ? "My Projects" : language === "french" ? "Mes Projets" : "私のプロジェクト"}</h2>
             <div className="projects--grid">
                 <div className="project" id="project--div--game" data-aos="flip-left">
                     <div className="project--pic" style={{ backgroundImage: `url(${gameOfLife02})` }}></div>
