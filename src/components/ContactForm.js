@@ -7,26 +7,6 @@ import emailjs from '@emailjs/browser';
 
 export default function ContactForm(props){
 
-    // code used to connect the form to the emailjs sevice, see https://www.emailjs.com/ for info
-    const form = useRef();
-  
-    const sendEmail = (e) => {
-        e.preventDefault();
-    
-        emailjs.sendForm(
-            'service_obdagma', 
-            'template_i038dq8', 
-            form.current, 
-            'LVRygFkD1LjQSFD--'
-        )
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-    }
-
-
     // props used to manage form visibility and language
     const formDisplay = props.formDisplay;
     const setFormDisplay = props.setFormDisplay;
@@ -60,12 +40,39 @@ export default function ContactForm(props){
         )
     }
 
+    const alertMessage = language === "english" ? "Your message has been sent successfully ! Thank you for taking the time to complete the form." : language === "french" ? "Votre message a bien été envoyé ! Merci d'avoir pris le temps de completer le formulaire." : "あなたのメッセージは正常に送信されました。フォームに記入していただきありがとうございます。";
 
+    // code used to connect the form to the emailjs sevice, see https://www.emailjs.com/ for info
+    const form = useRef();
+  
+    const sendEmail = (e) => {
+        e.preventDefault();
+        alert(alertMessage);
+        emailjs.sendForm(
+            'service_obdagma', 
+            'template_i038dq8', 
+            form.current, 
+            'LVRygFkD1LjQSFD--'
+        )
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
 
+        setFormData({
+            username: "",
+            userEmail: "",
+            subject: "",
+            message: ""
+            });
+        hideForm();
+
+    }
 
     return(
-        <div className={formDisplay === true ? "contact--form--container" : "contact--form--container contact--form--container--hidden"} onSubmit={sendEmail}>
-            <form className="contact--form" ref={form}>
+        <div className={formDisplay === true ? "contact--form--container" : "contact--form--container contact--form--container--hidden"}>
+            <form className="contact--form" ref={form} onSubmit={sendEmail}>
                 <button type="button" className="contact--form--exit--btn" onClick={hideForm}></button>
                 <h2 className="contact--form--title">{language === "english" ? "Contact me !" : language === "french" ? "Contactez moi !" : "お問い合わせ !"}</h2>
                 <input 
