@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
-import pic from "../pictures/profile-pic-01.JPG";
+import profile_picture from "../pictures/profile_picture02.JPG";
 import Aos from "aos";
 import "aos/dist/aos.css";
+
 
 export default function About(props){
 
@@ -38,8 +39,7 @@ export default function About(props){
                     </div>
                 </div>
                 <div className="about--picture" data-aos="flip-left" data-aos-delay="800">
-                    
-                    <img className="my--pic" src={pic} alt="me"></img>
+                    <div className="my--pic" style={{backgroundImage: `url(${profile_picture})`}}></div>
                     <div className="pic--footer">
                         <p>{language === "english" ? "Just everyday me !" : language === "french" ? "Moi au quotidien !" : "ただ毎日の私"}</p>
                     </div>

@@ -702,6 +702,7 @@ a {
   flex-direction: column;
   position: relative;
   height: 100%;
+  width: 18rem;
   box-shadow: 0px 0px 5px 5px hsla(0, 0%, 0%, 50%);
   margin-left: 1rem;
   z-index: 2;
@@ -709,14 +710,18 @@ a {
   color: var(--blue-1);
   padding: 0.3rem;
   border-radius: 0.3rem;
+  
 }
 
 .my--pic {
   height: 90%;
-  width: auto;
+  width: 100%;
+  background-size: cover;
+  background-position-x: 40%;
 }
 
 .pic--footer {
+  height: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -770,12 +775,13 @@ a {
 @media (max-width: 950px){
 
   .about {
-    height: 170vh;
+    height: auto;
     padding: 0rem 5rem;
   }
 
   .about--content {
     flex-direction: column;
+    height: 100%;
   }
 
   .about--text {
@@ -799,7 +805,7 @@ a {
   }
 
   .about--picture {
-    height: 27rem;
+    height: 28rem;
     margin-left: 0;
     margin-top: 3rem;
   }
@@ -822,7 +828,7 @@ a {
   }
 
   .about--picture {
-    height: 25rem;
+    height: 28rem;
   }
 }
 
@@ -830,7 +836,6 @@ a {
 
   .about {
     padding: 0rem 2rem;
-    height: 180vh;
   }
 
   .about--title {
@@ -846,8 +851,8 @@ a {
   }
 
   .about--picture {
-    margin-top: 2rem;
     height: 23rem;
+    width: 15rem;
   }
 }
 
