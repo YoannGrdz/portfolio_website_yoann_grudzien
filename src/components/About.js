@@ -1,15 +1,55 @@
-import React, { useEffect } from "react";
+import React from "react";
 import profile_picture from "../pictures/profile_picture02.JPG";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 
 export default function About(props){
 
-    // inititaliszinf animations on scroll
-    useEffect(() => {
-        Aos.init({duration: 750});
-    }, [])
+    
+    // animations with intersection observer ---
+
+    // for h2
+    const h2Ref = React.useRef();
+    const [h2Visible, setH2Visible] = React.useState();
+    // for description
+    const descriptionRef = React.useRef();
+    const [descriptionVisible, setDescriptionVisible] = React.useState();
+    // for picture
+    const pictureRef = React.useRef();
+    const [pictureVisible, setPictureVisible] = React.useState();
+
+    React.useEffect(() => {
+
+        // for h2
+        const h2Observer = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            setH2Visible(entry.isIntersecting);
+        }, {
+            threshold: 1
+        })
+        h2Observer.observe(h2Ref.current);
+
+        // for description
+        const descriptionObserver = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            setDescriptionVisible(entry.isIntersecting);
+        }, {
+            threshold: 0.7
+        })
+        descriptionObserver.observe(descriptionRef.current);
+
+        // for picture
+        const pictureObserver = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            setPictureVisible(entry.isIntersecting);
+        }, {
+            threshold: 0.7
+        })
+        pictureObserver.observe(pictureRef.current);
+
+    },[])
+
+    // ---
+
 
     const language = props.language;
 
@@ -29,21 +69,20 @@ export default function About(props){
     return (
         <section className="about" id="About">
             <div className="about--content">
-                <div className="about--background" data-aos="fade-right" data-aos-delay="400">{language === "english" ? "About" : language === "french" ? "À propos" : "私について"}</div>
+                <div className={descriptionVisible ? "about--background about--background--visible" : "about--background"}>{language === "english" ? "About" : language === "french" ? "À propos" : "私について"}</div>
                 <div className="about--text">
-                    <h2 className="about--title" data-aos="fade-up" >{language === "english" ? "About me" : language === "french" ? "À propos de moi" : "私について"}</h2>
-                    <div className="about--description" data-aos="fade-up" >
+                    <h2 className={h2Visible ? "about--title about--title--visible" : "about--title"} ref={h2Ref}>{language === "english" ? "About me" : language === "french" ? "À propos de moi" : "私について"}</h2>
+                    <div className={descriptionVisible ? "about--description about--description--visible" : "about--description"} ref={descriptionRef}>
                         <p>{language === "english" ? p1_en : language === "french" ? p1_fr : p1_jp}</p>
                         <p>{language === "english" ? p2_en : language === "french" ? p2_fr : p2_jp}</p>
                         <p>{language === "english" ? p3_en : language === "french" ? p3_fr : p3_jp}</p>
                     </div>
                 </div>
-                <div className="about--picture" data-aos="flip-left" data-aos-delay="800">
+                <div className={pictureVisible ? "about--picture about--picture--visible" : "about--picture"} ref={pictureRef}>
                     <div className="my--pic" style={{backgroundImage: `url(${profile_picture})`}}></div>
                     <div className="pic--footer">
                         <p>{language === "english" ? "Just everyday me !" : language === "french" ? "Moi au quotidien !" : "ただ毎日の私"}</p>
                     </div>
-                    
                 </div>
             </div>
         </section>

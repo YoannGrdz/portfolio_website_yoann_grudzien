@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import gameOfLife02 from "../pictures/gameOfLife02.png";
 import bookme01 from "../pictures/bookme01.png";
 import finance01 from "../pictures/finance01.png";
@@ -6,18 +6,11 @@ import piano01 from "../pictures/piano.jpg";
 import crudApp01 from "../pictures/crudApp01.jpg";
 import portfolio01 from "../pictures/portfolio01.png";
 import logosObject from "../logos/logos.js";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
-var github_svg = logosObject.github_svg;
+const github_svg = logosObject.github_svg;
 
 export default function Projects(props){
     
-    // inititaliszinf animations on scroll
-    useEffect(() => {
-        Aos.init({duration: 750});
-    }, [])
-
     const language = props.language;
 
     // variables used to store the different language options for each project
@@ -46,12 +39,115 @@ export default function Projects(props){
     const description_crud_jp = "近日公開 ! React で構築された ウェブ アプリケーションで、ユーザーがログインして何かを行うことができます。";
 
 
+    
+    // animations with intersection observer ---
+
+    // for h2
+    const h2Ref = React.useRef();
+    const [h2Visible, setH2Visible] = React.useState();
+    
+    // for p1
+    const p1Ref = React.useRef();
+    const [p1Visible, setP1Visible] = React.useState();
+
+    // for p2
+    const p2Ref = React.useRef();
+    const [p2Visible, setP2Visible] = React.useState();
+
+    // for p1
+    const p3Ref = React.useRef();
+    const [p3Visible, setP3Visible] = React.useState();
+
+    // for p1
+    const p4Ref = React.useRef();
+    const [p4Visible, setP4Visible] = React.useState();
+
+    // for p1
+    const p5Ref = React.useRef();
+    const [p5Visible, setP5Visible] = React.useState();
+
+    // for p1
+    const p6Ref = React.useRef();
+    const [p6Visible, setP6Visible] = React.useState();
+
+
+    React.useEffect(() => {
+
+        // for h2
+        const h2Observer = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            setH2Visible(entry.isIntersecting);
+        }, {
+            threshold: 1
+        })
+        h2Observer.observe(h2Ref.current);
+
+        // for p1
+        const p1Observer = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            setP1Visible(entry.isIntersecting);
+        }, {
+            threshold: 0.1
+        })
+        p1Observer.observe(p1Ref.current);
+
+        // for p2
+        const p2Observer = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            setP2Visible(entry.isIntersecting);
+        }, {
+            threshold: 0.1
+        })
+        p2Observer.observe(p2Ref.current);
+
+        // for p3
+        const p3Observer = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            setP3Visible(entry.isIntersecting);
+        }, {
+            threshold: 0.1
+        })
+        p3Observer.observe(p3Ref.current);
+
+        // for p4
+        const p4Observer = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            setP4Visible(entry.isIntersecting);
+        }, {
+            threshold: 0.1
+        })
+        p4Observer.observe(p4Ref.current);
+
+        // for p5
+        const p5Observer = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            setP5Visible(entry.isIntersecting);
+        }, {
+            threshold: 0.1
+        })
+        p5Observer.observe(p5Ref.current);
+
+        // for p6
+        const p6Observer = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            setP6Visible(entry.isIntersecting);
+        }, {
+            threshold: 0.1
+        })
+        p6Observer.observe(p6Ref.current);
+
+    },[])
+
+
+    // ---
+
+
 
     return(
         <div className="projects" id="Projects">
-            <h2 className="projects--header" data-aos="fade-up">{language === "english" ? "My Projects" : language === "french" ? "Mes Projets" : "私のプロジェクト"}</h2>
+            <h2 className={h2Visible ? "projects--header projects--header--visible" : "projects--header"} ref={h2Ref}>{language === "english" ? "My Projects" : language === "french" ? "Mes Projets" : "私のプロジェクト"}</h2>
             <div className="projects--grid">
-                <div className="project" id="project--div--game" data-aos="flip-left">
+                <div className={p1Visible ? "project project--visible" : "project"} id="project--div--game" ref={p1Ref}>
                     <div className="project--pic" style={{ backgroundImage: `url(${gameOfLife02})` }}></div>
                     <div className="project--info">
                         <h3>The React Game of Life</h3>
@@ -61,7 +157,7 @@ export default function Projects(props){
                         {github_svg()}
                     </a>
                 </div>
-                <div className="project" id="project--div--bookme" data-aos="flip-left" data-aos-delay="300">
+                <div className={p2Visible ? "project project--visible" : "project"} id="project--div--bookme" ref={p2Ref}>
                     <div className="project--pic" style={{backgroundImage: `url(${bookme01})`}}></div>
                     <div className="project--info"> 
                         <h3>Bookme</h3>
@@ -71,7 +167,7 @@ export default function Projects(props){
                         {github_svg()}
                     </a>     
                 </div>
-                <div className="project" id="project--div--finance" data-aos="flip-left">
+                <div className={p3Visible ? "project project--visible" : "project"} id="project--div--finance" ref={p3Ref}>
                     <div className="project--pic" style={{backgroundImage: `url(${finance01})`}}></div>
                     <div className="project--info">
                         <h3>Finance</h3>
@@ -81,7 +177,7 @@ export default function Projects(props){
                         {github_svg()}
                     </a>
                 </div>
-                <div className="project" id="project--div--portfolio" data-aos="flip-left" data-aos-delay="300">
+                <div className={p4Visible ? "project project--visible" : "project"} id="project--div--portfolio" ref={p4Ref}>
                     <div className="project--pic" style={{backgroundImage: `url(${portfolio01})`}}></div>
                     <div className="project--info">
                         <h3>My Portfolio Website</h3>
@@ -91,7 +187,7 @@ export default function Projects(props){
                         {github_svg()}
                     </a>
                 </div>
-                <div className="project" id="project--div--piano" data-aos="flip-left">
+                <div className={p5Visible ? "project project--visible" : "project"} id="project--div--piano" ref={p5Ref}>
                     <div className="project--pic" style={{backgroundImage: `url(${piano01})`}}></div>
                     <div className="project--info">
                         <h3>React Keyboard Piano</h3>
@@ -101,7 +197,7 @@ export default function Projects(props){
                         {github_svg()}
                     </div>
                 </div>
-                <div className="project" id="project--div--crud" data-aos="flip-left" data-aos-delay="300">
+                <div className={p6Visible ? "project project--visible" : "project"} id="project--div--crud" ref={p6Ref}>
                     <div className="project--pic" style={{backgroundImage: `url(${crudApp01})`}}></div>
                     <div className="project--info">
                         <h3>React Crud App</h3>

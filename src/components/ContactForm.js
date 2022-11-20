@@ -2,9 +2,6 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 
-
-
-
 export default function ContactForm(props){
 
     // props used to manage form visibility and language

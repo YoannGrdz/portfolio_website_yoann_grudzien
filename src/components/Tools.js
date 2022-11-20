@@ -1,14 +1,53 @@
-import React, { useEffect } from "react";
+import React from "react";
 import logosObject from "../logos/logos";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 export default function Tools(props){
 
-    // inititaliszinf animations on scroll
-    useEffect(() => {
-        Aos.init({duration: 750});
-    }, [])
+    // animations with intersection observer ---
+
+    // for h2
+    const h2Ref = React.useRef();
+    const [h2Visible, setH2Visible] = React.useState();
+    // for p
+    const pRef = React.useRef();
+    const [pVisible, setPVisible] = React.useState();
+    // for hex section
+    const hexRef = React.useRef();
+    const [hexVisible, setHexVisible] = React.useState();
+
+    React.useEffect(() => {
+
+        // for h2
+        const h2Observer = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            setH2Visible(entry.isIntersecting);
+        }, {
+            threshold: 1
+        })
+        h2Observer.observe(h2Ref.current);
+
+        // for p
+        const pObserver = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            setPVisible(entry.isIntersecting);
+        }, {
+            threshold: 1
+        })
+        pObserver.observe(pRef.current);
+
+        // for hex section
+        const hexObserver = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            setHexVisible(entry.isIntersecting);
+        }, {
+            threshold: 0.4
+        })
+        hexObserver.observe(hexRef.current);
+
+    },[])
+
+    
+    // ---
 
     const language = props.language;
 
@@ -19,9 +58,9 @@ export default function Tools(props){
     return (
 
         <div className='tools' id="Tools">
-            <h2 className="tools--title" data-aos="fade-up">{language === "english" ? "The tools I use" : language === "french" ? "Mes outils" : "私のツール"}</h2>
-            <p className="tools--text" data-aos="fade-up">{language === "english" ? paragraph_en : language === "french" ? paragraph_fr : paragraph_jp}</p>
-            <div className='hex--container' data-aos="fade-right" data-aos-duration="1000" data-aos-delay="300">
+            <h2 className={h2Visible ? "tools--title tools--title--visible" : "tools--title"} ref={h2Ref}>{language === "english" ? "The tools I use" : language === "french" ? "Mes outils" : "私のツール"}</h2>
+            <p className={pVisible ? "tools--text tools--text--visible" : "tools--text"} ref={pRef}>{language === "english" ? paragraph_en : language === "french" ? paragraph_fr : paragraph_jp}</p>
+            <div className={hexVisible ? "hex--container hex--container--visible" : "hex--container"} ref={hexRef}>
 
                 <div className="hex--row hex--row--1">
                     <div className="hex--subrow sub--1">

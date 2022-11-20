@@ -11,7 +11,7 @@ html {
 body {
   --blue-1: hsl(231, 75%, 10%);
   --blue-2: hsl(231, 75%, 5%);
-  --light-gold: hsl(51, 100%, 90%);
+  --light-gold: hsl(51, 100%, 88%);
   --red: hsl(346, 84%, 61%);
   --blue: hsl(241, 34%, 60%);
 
@@ -659,8 +659,16 @@ a {
   z-index: 1;
   font-size: 10rem;
   font-weight: bolder;
-
   left: 0;
+  transform: translateX(-10rem);
+  opacity: 0;
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.about--background--visible{
+  transform: translateX(0rem);
+  opacity: 1;
 }
 
 .about--text {
@@ -682,6 +690,15 @@ a {
   font-size: 3rem;
   padding: 1rem;
   margin: 0;
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.about--title--visible {
+  opacity: 1;
+  transform: translateY(0rem);
 }
 
 .about--description {
@@ -690,6 +707,15 @@ a {
   z-index: 1;
   font-size: 1.3rem;
   padding: 1rem;
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.about--description--visible {
+  opacity: 1;
+  transform: translateY(0rem);
 }
 
 .about--description p {
@@ -710,7 +736,15 @@ a {
   color: var(--blue-1);
   padding: 0.3rem;
   border-radius: 0.3rem;
-  
+  opacity: 0;
+  transform: rotateY(90deg);
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.about--picture--visible {
+  opacity: 1;
+  transform: rotateY(0deg);
 }
 
 .my--pic {
@@ -868,33 +902,62 @@ a {
   align-items: center;
   gap: 1rem;
   padding: 3rem;
-  height: 100vh;
+  height: 110vh;
 }
 
-
 .tools--title {
+  position: relative;
   font-family: 'Maven Pro', sans-serif;
   font-size: 3rem;
   color: var(--light-gold);
   text-align: center;
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.tools--title--visible{
+  opacity: 1;
+  transform: translateY(0rem);
 }
 
 .tools--text {
+  position: relative;
   color:hsl(0, 0%, 70%);
   font-size: 1.3rem;
   line-height: 1.6;
   max-width: 60rem;
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   padding: 1rem;
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.tools--text--visible{
+  opacity: 1;
+  transform: translateY(0rem);
 }
 
 .hex--container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  transform: translateX(-20%);
+  opacity: 0;
+  transition: 1.5s;
+  transition-delay: 0.5s;
+}
+
+.hex--container--visible {
+  transform: translateX(0%);
+  opacity: 1;
 }
 
 .hex--row {
@@ -1262,6 +1325,15 @@ a {
   margin-top: 5rem;
   font-size: 3rem;
   margin-bottom: 5rem;
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.projects--header--visible {
+  opacity: 1;
+  transform: translateY(0rem);
 }
 
 .projects--grid {
@@ -1282,6 +1354,15 @@ a {
   align-items: center;
   position: relative;
   border-radius: 0.3rem;
+  opacity: 0;
+  transform: rotateY(90deg);
+  transition: 1s;
+  transition-delay: 0.5s;
+}
+
+.project--visible{
+  opacity: 1;
+  transform: rotateY(0deg);
 }
 
 .project--pic {
