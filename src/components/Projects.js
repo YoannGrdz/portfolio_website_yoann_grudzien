@@ -144,7 +144,7 @@ export default function Projects(props){
 
 
     return(
-        <div className="projects" id="Projects">
+        <section className="projects" id="Projects">
             <h2 className={h2Visible ? "projects--header projects--header--visible" : "projects--header"} ref={h2Ref}>{language === "english" ? "My Projects" : language === "french" ? "Mes Projets" : "私のプロジェクト"}</h2>
             <div className="projects--grid">
                 <div className={p1Visible ? "project project--visible" : "project"} id="project--div--game" ref={p1Ref}>
@@ -208,7 +208,7 @@ export default function Projects(props){
                     </div>
                 </div>
             </div>
-        </div>    
+        </section>    
 
     )
 }

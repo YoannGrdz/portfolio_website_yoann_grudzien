@@ -57,7 +57,7 @@ export default function Tools(props){
 
     return (
 
-        <div className='tools' id="Tools">
+        <section className='tools' id="Tools">
             <h2 className={h2Visible ? "tools--title tools--title--visible" : "tools--title"} ref={h2Ref}>{language === "english" ? "The tools I use" : language === "french" ? "Mes outils" : "私のツール"}</h2>
             <p className={pVisible ? "tools--text tools--text--visible" : "tools--text"} ref={pRef}>{language === "english" ? paragraph_en : language === "french" ? paragraph_fr : paragraph_jp}</p>
             <div className={hexVisible ? "hex--container hex--container--visible" : "hex--container"} ref={hexRef}>
@@ -123,7 +123,7 @@ export default function Tools(props){
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
     )
 }
