@@ -4,48 +4,21 @@ import logosObject from "../logos/logos";
 export default function Tools(props){
 
     // animations with intersection observer ---
-
-    // for h2
-    const h2Ref = React.useRef();
-    const [h2Visible, setH2Visible] = React.useState();
-    // for p
-    const pRef = React.useRef();
-    const [pVisible, setPVisible] = React.useState();
-    // for hex section
-    const hexRef = React.useRef();
-    const [hexVisible, setHexVisible] = React.useState();
+    
+    const toolsRef = React.useRef();
+    const [toolsVisible, setToolsVisible] = React.useState();
 
     React.useEffect(() => {
 
-        // for h2
-        const h2Observer = new IntersectionObserver((entries) => {
+        const toolsObserver = new IntersectionObserver((entries) => {
             const entry = entries[0];
-            setH2Visible(entry.isIntersecting);
+            setToolsVisible(entry.isIntersecting);
         }, {
-            threshold: 1
+            threshold: 0.5
         })
-        h2Observer.observe(h2Ref.current);
-
-        // for p
-        const pObserver = new IntersectionObserver((entries) => {
-            const entry = entries[0];
-            setPVisible(entry.isIntersecting);
-        }, {
-            threshold: 1
-        })
-        pObserver.observe(pRef.current);
-
-        // for hex section
-        const hexObserver = new IntersectionObserver((entries) => {
-            const entry = entries[0];
-            setHexVisible(entry.isIntersecting);
-        }, {
-            threshold: 0.4
-        })
-        hexObserver.observe(hexRef.current);
+        toolsObserver.observe(toolsRef.current);
 
     },[])
-
     
     // ---
 
@@ -57,10 +30,10 @@ export default function Tools(props){
 
     return (
 
-        <section className='tools' id="Tools">
-            <h2 className={h2Visible ? "tools--title tools--title--visible" : "tools--title"} ref={h2Ref}>{language === "english" ? "The tools I use" : language === "french" ? "Mes outils" : "私のツール"}</h2>
-            <p className={pVisible ? "tools--text tools--text--visible" : "tools--text"} ref={pRef}>{language === "english" ? paragraph_en : language === "french" ? paragraph_fr : paragraph_jp}</p>
-            <div className={hexVisible ? "hex--container hex--container--visible" : "hex--container"} ref={hexRef}>
+        <section className='tools' id="Tools" ref={toolsRef}>
+            <h2 className={toolsVisible ? "tools--title tools--title--visible" : "tools--title"}>{language === "english" ? "The tools I use" : language === "french" ? "Mes outils" : "私のツール"}</h2>
+            <p className={toolsVisible ? "tools--text tools--text--visible" : "tools--text"}>{language === "english" ? paragraph_en : language === "french" ? paragraph_fr : paragraph_jp}</p>
+            <div className={toolsVisible ? "hex--container hex--container--visible" : "hex--container"}>
 
                 <div className="hex--row hex--row--1">
                     <div className="hex--subrow sub--1">

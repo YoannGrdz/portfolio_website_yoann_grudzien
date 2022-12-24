@@ -7,9 +7,6 @@ export default function About(props){
     
     // animations with intersection observer ---
 
-    // for h2
-    const h2Ref = React.useRef();
-    const [h2Visible, setH2Visible] = React.useState();
     // for description
     const descriptionRef = React.useRef();
     const [descriptionVisible, setDescriptionVisible] = React.useState();
@@ -18,15 +15,6 @@ export default function About(props){
     const [pictureVisible, setPictureVisible] = React.useState();
 
     React.useEffect(() => {
-
-        // for h2
-        const h2Observer = new IntersectionObserver((entries) => {
-            const entry = entries[0];
-            setH2Visible(entry.isIntersecting);
-        }, {
-            threshold: 1
-        })
-        h2Observer.observe(h2Ref.current);
 
         // for description
         const descriptionObserver = new IntersectionObserver((entries) => {
@@ -71,7 +59,7 @@ export default function About(props){
             <div className="about--content">
                 <div className={descriptionVisible ? "about--background about--background--visible" : "about--background"}>{language === "english" ? "About" : language === "french" ? "À propos" : "私について"}</div>
                 <div className="about--text">
-                    <h2 className={h2Visible ? "about--title about--title--visible" : "about--title"} ref={h2Ref}>{language === "english" ? "About me" : language === "french" ? "À propos de moi" : "私について"}</h2>
+                    <h2 className={descriptionVisible ? "about--title about--title--visible" : "about--title"}>{language === "english" ? "About me" : language === "french" ? "À propos de moi" : "私について"}</h2>
                     <div className={descriptionVisible ? "about--description about--description--visible" : "about--description"} ref={descriptionRef}>
                         <p>{language === "english" ? p1_en : language === "french" ? p1_fr : p1_jp}</p>
                         <p>{language === "english" ? p2_en : language === "french" ? p2_fr : p2_jp}</p>

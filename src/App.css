@@ -660,7 +660,7 @@ a {
   font-size: 10rem;
   font-weight: bolder;
   left: 0;
-  transform: translateX(-10rem);
+  transform: translateX(-15rem);
   opacity: 0;
   transition: 1s;
   transition-delay: 0.5s;
@@ -679,7 +679,6 @@ a {
   padding: 1rem;
   width: 50%;
   height: 100%;
-  
   line-height: 1.6;
 }
 
@@ -710,7 +709,7 @@ a {
   opacity: 0;
   transform: translateY(3rem);
   transition: 1s;
-  transition-delay: 0.5s;
+  transition-delay: 1s;
 }
 
 .about--description--visible {
@@ -935,7 +934,7 @@ a {
   opacity: 0;
   transform: translateY(3rem);
   transition: 1s;
-  transition-delay: 0.5s;
+  transition-delay: 1s;
 }
 
 .tools--text--visible{
@@ -953,7 +952,7 @@ a {
   transform: translateX(-20%);
   opacity: 0;
   transition: 1.5s;
-  transition-delay: 0.5s;
+  transition-delay: 1.5s;
 }
 
 .hex--container--visible {
