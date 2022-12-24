@@ -1,6 +1,5 @@
 import './App.css';
-import "./components/Welcome.js";
-import Welcome from './components/Welcome.js';
+import Welcome from './components/Welcome';
 import Navbar from './components/Navbar';
 import Socials from './components/Socials';
 import About from './components/About';

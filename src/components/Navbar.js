@@ -56,7 +56,8 @@ export default function Navbar(props){
     }
 
     // mobile navbar control ------------------------------------------------ //
-    const [menuIsOpen, setMenuIsOpen] = React.useState("false");
+    const [menuIsOpen, setMenuIsOpen] = React.useState(false);
+
 
     function toggleMenu(){
         setMenuIsOpen(previous => !previous);
@@ -65,6 +66,7 @@ export default function Navbar(props){
     function closeMenu(){
         setMenuIsOpen(false);
     }
+
 
     return (
         <nav className="nav">

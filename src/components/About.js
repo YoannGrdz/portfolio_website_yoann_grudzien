@@ -42,7 +42,7 @@ export default function About(props){
             const entry = entries[0];
             setPictureVisible(entry.isIntersecting);
         }, {
-            threshold: 0.7
+            threshold: 0.5
         })
         pictureObserver.observe(pictureRef.current);
 
