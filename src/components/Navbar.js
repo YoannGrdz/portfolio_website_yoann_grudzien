@@ -70,7 +70,7 @@ export default function Navbar(props){
 
     return (
         <nav className="nav">
-            <p className="nav--logo">Y</p>
+            <a href="#Welcome" className="nav--logo--container" onClick={closeMenu}><p className="nav--logo">Y</p></a>
             <ul className={menuIsOpen ? "nav--list" : "nav--list nav--list--hidden"}>
                 <li className="nav--button">
                     <a href="#Welcome" onClick={closeMenu}>{language === "english" ? "Welcome" : language === "french" ? "Bienvenue" : "ようこそ"}</a>
