@@ -3,9 +3,10 @@ import gameOfLife02 from "../pictures/gameOfLife02.png";
 import bookme01 from "../pictures/bookme01.png";
 import finance01 from "../pictures/finance01.png";
 import piano01 from "../pictures/piano.jpg";
-import crudApp01 from "../pictures/crudApp01.jpg";
+import decimale01 from "../pictures/decimale01.png";
 import portfolio01 from "../pictures/portfolio01.png";
 import logosObject from "../logos/logos.js";
+import arrowSVG from "../icons/arrowSVG.js";
 
 const github_svg = logosObject.github_svg;
 
@@ -34,9 +35,9 @@ export default function Projects(props){
     const description_piano_fr = "Bientôt disponible ! Une application Web construite avec React où les utilisateurs peuvent jouer du piano avec leur clavier.";
     const description_piano_jp = "近日公開 ! ユーザーがキーボードでピアノを弾くことができる、React で構築された ウェブ アプリケーション。";
 
-    const description_crud_en = "Coming soon ! A web application built with React where users can login and... do some stuff.";
-    const description_crud_fr = "Bientôt disponible ! Une application Web construite avec React où les utilisateurs peuvent se connecter et... faire des choses.";
-    const description_crud_jp = "近日公開 ! React で構築された ウェブ アプリケーションで、ユーザーがログインして何かを行うことができます。";
+    const description_decimale_en = "Decimale is a website that I designed and built using React for a French accounting firm located in Reims, Champagne.";
+    const description_decimale_fr = "Decimale est un site web que j'ai conçu et développé avec React pour un cabinet d'expertise comptable français basé à Reims, en Champagne.";
+    const description_decimale_jp = "Decimale（デシマル）は、私がReactを使用して構築した、シャンパーニュ地方のレームに拠点を置くフランスの会計事務所向けのウェブサイトです。";
 
 
     
@@ -147,6 +148,14 @@ export default function Projects(props){
         <section className="projects" id="Projects">
             <h2 className={h2Visible ? "projects--header projects--header--visible" : "projects--header"} ref={h2Ref}>{language === "english" ? "My Projects" : language === "french" ? "Mes Projets" : "私のプロジェクト"}</h2>
             <div className="projects--grid">
+                <a href="https://decimale.eu/" target="_blank" rel="noreferrer" className={p6Visible ? "project project--visible" : "project"} id="project--div--decimale" ref={p6Ref}>
+                    <div className="project--pic" style={{backgroundImage: `url(${decimale01})`}}></div>
+                    <div className="project--info">
+                        <h3>Decimale</h3>
+                        <p>{language === "english" ? description_decimale_en : language === "french" ? description_decimale_fr : description_decimale_jp}</p>
+                    </div>
+                    <div className="arrowSVGContainer">{arrowSVG()}</div>
+                </a>
                 <div className={p1Visible ? "project project--visible" : "project"} id="project--div--game" ref={p1Ref}>
                     <div className="project--pic" style={{ backgroundImage: `url(${gameOfLife02})` }}></div>
                     <div className="project--info">
@@ -197,16 +206,7 @@ export default function Projects(props){
                         {github_svg()}
                     </div>
                 </div>
-                <div className={p6Visible ? "project project--visible" : "project"} id="project--div--crud" ref={p6Ref}>
-                    <div className="project--pic" style={{backgroundImage: `url(${crudApp01})`}}></div>
-                    <div className="project--info">
-                        <h3>React Crud App</h3>
-                        <p>{language === "english" ? description_crud_en : language === "french" ? description_crud_fr : description_crud_jp}</p>
-                    </div>
-                    <div className="project--github">
-                        {github_svg()}
-                    </div>
-                </div>
+                
             </div>
         </section>    
 

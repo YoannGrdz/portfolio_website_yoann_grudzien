@@ -1424,7 +1424,7 @@ a {
   background: linear-gradient(135deg,  hsl(30, 100%, 80%), hsl(30, 100%, 50%));
 }
 
-#project--div--crud {
+#project--div--decimale {
   background: linear-gradient(135deg,  hsl(300, 100%, 80%), hsl(300, 100%, 50%));
 }
 
@@ -1448,6 +1448,32 @@ a {
 .project--github:hover {
   border-color: var(--light-gold);
   background-color: hsla(0, 0%, 0%, 25%);
+}
+
+.arrowSVGContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  bottom: 1rem;
+  left: 1rem;
+  height: 3.7rem;
+  width: 3.7rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 3px 3px hsla(0, 0%, 50%, 50%);
+  transition: 0.3s;
+}
+
+.arrowSVGContainer:hover {
+  border-color: var(--light-gold);
+  background-color: hsla(0, 0%, 0%, 25%);
+}
+
+.arrowSVG {
+  fill: white;
+  transform: rotateZ(60deg);
 }
 
 @media (max-width: 1250px){
@@ -1537,6 +1563,10 @@ a {
   }
 
   .project--github {
+    position: static;
+  }
+
+  .arrowSVGContainer {
     position: static;
   }
 }
