@@ -1405,27 +1405,27 @@ a {
 }
 
 #project--div--game {
-  background: linear-gradient(135deg,  hsl(0, 100%, 80%), hsl(0, 100%, 50%));
+  background-color: hsl(350, 47%, 42%);
 }
 
 #project--div--bookme {
-  background: linear-gradient(135deg,  hsl(60, 100%, 80%), hsl(60, 100%, 50%));
+  background-color: hsl(54, 88%, 67%);
 }
 
 #project--div--finance {
-  background: linear-gradient(135deg,  hsl(200, 100%, 80%), hsl(200, 100%, 50%));
+  background-color: hsl(191, 47%, 51%);
 }
 
 #project--div--portfolio {
-  background: linear-gradient(135deg,  hsl(95, 100%, 80%), hsl(95, 100%, 50%));
+  background-color: hsl(27, 100%, 71%);
 }
 
 #project--div--piano {
-  background: linear-gradient(135deg,  hsl(30, 100%, 80%), hsl(30, 100%, 50%));
+  background-color: hsl(105, 33%, 67%);
 }
 
 #project--div--decimale {
-  background: linear-gradient(135deg,  hsl(300, 100%, 80%), hsl(300, 100%, 50%));
+  background-color: hsl(225, 64%, 33%);
 }
 
 .project--github {
