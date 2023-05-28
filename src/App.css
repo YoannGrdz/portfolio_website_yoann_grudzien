@@ -11,9 +11,7 @@ html {
 body {
   --blue-1: hsl(231, 75%, 10%);
   --blue-2: hsl(231, 75%, 5%);
-  --light-gold: hsl(51, 100%, 88%);
-  --red: hsl(346, 84%, 61%);
-  --blue: hsl(241, 34%, 60%);
+  --light-gold: hsl(51, 100%, 92%);
 
   padding: 0;
   margin: 0;
