@@ -27,6 +27,32 @@ a {
   color: inherit;
 }
 
+
+.fav {
+  height: 100vh;
+  background-color: var(--blue-1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.fav--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid var(--light-gold);
+  border-radius: 100%;
+}
+
+.favicon {
+  font-size: 7rem;
+  color: var(--light-gold);
+  font-family: "Monoton", cursive;
+  height: 9rem;
+  width: 9rem;
+}
+
 /* Navbar ------------------------------------------------------------------- */
 
 .nav {
@@ -47,6 +73,7 @@ a {
 
 .nav--logo {
   font-family: "Permanent Marker", cursive;
+  font-family: 'Monoton', cursive;
   font-size: 2rem;
   border: 3px solid var(--light-gold);
   border-radius: 100%;
@@ -337,11 +364,10 @@ a {
   align-items: center;
   color: var(--light-gold);
   font-size: 2rem;
-  width: 3rem;
-  height: 3rem;
   border-radius: 100%;
+  border: 2px solid hsla(0, 0%, 0%, 0%);
   transition: 0.3s;
-  padding: 0.5rem;
+  padding: 0.7rem;
 }
 
 .social a {
@@ -553,6 +579,8 @@ a {
 .name {
   font-size: 6rem;
   font-family: 'Permanent Marker', cursive;
+  font-family: 'Monoton', cursive;
+  font-weight: normal;
 }
 
 .job-title {
